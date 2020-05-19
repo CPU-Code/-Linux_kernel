@@ -1,0 +1,7 @@
+drivers/mfd/mc13xxx-core.ko
+drivers/mfd/mc13xxx-spi.ko
+drivers/mfd/mc13xxx-i2c.ko
+drivers/mfd/mfd-core.ko
+drivers/mfd/da9062-core.ko
+drivers/mfd/da9063.ko
+drivers/mfd/rn5t618.ko

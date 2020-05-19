@@ -1,0 +1,17 @@
+sound/soc/fsl/snd-soc-fsl-asoc-card.ko
+sound/soc/fsl/snd-soc-fsl-asrc.ko
+sound/soc/fsl/snd-soc-fsl-sai.ko
+sound/soc/fsl/snd-soc-fsl-ssi.ko
+sound/soc/fsl/snd-soc-fsl-spdif.ko
+sound/soc/fsl/snd-soc-fsl-esai.ko
+sound/soc/fsl/snd-soc-fsl-utils.ko
+sound/soc/fsl/snd-soc-imx-ssi.ko
+sound/soc/fsl/snd-soc-imx-audmux.ko
+sound/soc/fsl/imx-pcm-fiq.ko
+sound/soc/fsl/imx-pcm-dma.ko
+sound/soc/fsl/snd-soc-eukrea-tlv320.ko
+sound/soc/fsl/snd-soc-phycore-ac97.ko
+sound/soc/fsl/snd-soc-imx-es8328.ko
+sound/soc/fsl/snd-soc-imx-sgtl5000.ko
+sound/soc/fsl/snd-soc-imx-spdif.ko
+sound/soc/fsl/snd-soc-imx-mc13783.ko

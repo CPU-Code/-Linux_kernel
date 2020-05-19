@@ -1,0 +1,9 @@
+drivers/iio/industrialio.ko
+drivers/iio/accel/mma8452.ko
+drivers/iio/adc/imx7d_adc.ko
+drivers/iio/adc/vf610_adc.ko
+drivers/iio/buffer/industrialio-triggered-buffer.ko
+drivers/iio/buffer/kfifo_buf.ko
+drivers/iio/light/isl29018.ko
+drivers/iio/magnetometer/mag3110.ko
+drivers/iio/pressure/mpl3115.ko

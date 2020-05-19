@@ -1,0 +1,6 @@
+drivers/staging/media/imx/imx6-media.ko
+drivers/staging/media/imx/imx-media-common.ko
+drivers/staging/media/imx/imx6-media-csi.ko
+drivers/staging/media/imx/imx6-mipi-csi2.ko
+drivers/staging/media/imx/imx7-media-csi.ko
+drivers/staging/media/imx/imx7-mipi-csis.ko

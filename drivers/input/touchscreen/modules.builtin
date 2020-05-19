@@ -1,0 +1,15 @@
+drivers/input/touchscreen/of_touchscreen.ko
+drivers/input/touchscreen/ads7846.ko
+drivers/input/touchscreen/da9052_tsi.ko
+drivers/input/touchscreen/edt-ft5x06.ko
+drivers/input/touchscreen/egalax_ts.ko
+drivers/input/touchscreen/goodix.ko
+drivers/input/touchscreen/imx6ul_tsc.ko
+drivers/input/touchscreen/max11801_ts.ko
+drivers/input/touchscreen/mc13783_ts.ko
+drivers/input/touchscreen/stmpe-ts.ko
+drivers/input/touchscreen/tsc200x-core.ko
+drivers/input/touchscreen/tsc2004.ko
+drivers/input/touchscreen/tsc2007.ko
+drivers/input/touchscreen/sx8654.ko
+drivers/input/touchscreen/colibri-vf50-ts.ko
