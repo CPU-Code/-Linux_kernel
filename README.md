@@ -1,37 +1,118 @@
+<!--
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:01
+ * @LastEditTime: 2020-06-27 19:49:54
+ * @FilePath: \Linux_kernel\README.md
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+--> 
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:01
+ * @LastEditTime: 2020-06-27 19:49:47
+ * @FilePath: \Linux_kernel\README.md
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+
 # Linux_kernel
 
-#### 介绍
+## 介绍
 linux内核的代码分析
 
-#### 软件架构
-软件架构说明
+## 目录结构
+
+* [arch__硬件体系结构](#arch__硬件体系结构)
+* [block__块设备驱动程序I/O调度](#arch__硬件体系结构)
+* [certs__](#certs__)
+* [crypto__加密和散列算法](#crypto__加密和散列算法)
+* [Documentation__内核的解释和注释](#Documentation__内核的解释和注释)
+* [drivers__设备驱动程序](#drivers__设备驱动程序)
+* [fs__文件系统](#fs__文件系统)
+* [include__头文件](#include__头文件)
+* [init__内核初始化](#init__内核初始化)
+* [ipc__进程间通信](#ipc__进程间通信)
+* [kernel__内核核心](#kernel__内核核心)
+* [lib__库文件](#lib__库文件)
+* [LICENSES__](#LICENSES__)
+* [mm__内存管理](#mm__内存管理)
+* [net__网络](#net__网络)
+* [samples__](#samples__)
+* [scripts__配置内核的脚本](#scripts__配置内核的脚本)
+* [secuity__SELinux的模块](#secuity__SELinux的模块)
+* [sound__音频设备](#sound__音频设备)
+* [tools__](#tools__)
+* [usr__打包和压缩的cpio](#usr__打包和压缩的cpio)
+* [virt__](#virt__)
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## [arch__硬件体系结构](arch)
 
 
-#### 码云特技
+## [block__块设备驱动程序I/O调度](block)
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+## [certs__](certs)
+
+
+## [crypto__加密和散列算法](crypto)
+
+
+## [Documentation__内核的解释和注释](Documentation)
+
+
+## [drivers__设备驱动程序](drivers)
+
+
+## [fs__文件系统](fs)
+
+
+## [include__头文件](include)
+
+### [include/linux](include/linux)
+
+* [sched.h__描述进程](include/linux/sched.h)
+
+
+## [init__内核初始化](init)
+
+
+## [ipc__进程间通信](ipc)
+
+
+## [kernel__内核核心](kernel)
+
+* [fork.c__创建内核线程](kernel/fork.c)
+
+
+## [lib__库文件](lib)
+
+
+## [LICENSES__](LICENSES)
+
+
+## [mm__内存管理](mm)
+
+
+## [net__网络](net)
+
+
+## [samples__](samples)
+
+
+## [scripts__配置内核的脚本](scripts)
+
+
+## [secuity__SELinux的模块](secuity)
+
+
+## [sound__音频设备](sound)
+
+
+## [tools__](tools)
+
+
+## [usr__打包和压缩的cpio](usr)
+
+
+## [virt__](virt)
+
+
