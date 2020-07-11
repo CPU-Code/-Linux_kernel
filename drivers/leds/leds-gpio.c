@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:12
+ * @LastEditTime: 2020-06-27 19:53:59
+ * @FilePath: \Linux_kernel\drivers\leds\leds-gpio.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * LEDs driver for GPIOs
@@ -6,6 +14,7 @@
  * Raphael Assenat <raph@8d.com>
  * Copyright (C) 2008 Freescale Semiconductor, Inc.
  */
+/* 包含内核中的多个头文件 */
 #include <linux/err.h>
 #include <linux/gpio.h>
 #include <linux/gpio/consumer.h>
@@ -17,8 +26,9 @@
 #include <linux/property.h>
 #include <linux/slab.h>
 
+/* 设备结构体 */
 struct gpio_led_data {
-	struct led_classdev cdev;
+	struct led_classdev cdev;	/* led字符设备cdev结构体 */
 	struct gpio_desc *gpiod;
 	u8 can_sleep;
 	u8 blinking;

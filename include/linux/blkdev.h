@@ -1690,24 +1690,32 @@ static inline struct bio_vec *rq_integrity_vec(struct request *rq)
 
 #endif /* CONFIG_BLK_DEV_INTEGRITY */
 
+/**
+ * @function: 块设备的操作集
+ * @parameter: 
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 struct block_device_operations {
-	int (*open) (struct block_device *, fmode_t);
-	void (*release) (struct gendisk *, fmode_t);
-	int (*rw_page)(struct block_device *, sector_t, struct page *, unsigned int);
-	int (*ioctl) (struct block_device *, fmode_t, unsigned, unsigned long);
-	int (*compat_ioctl) (struct block_device *, fmode_t, unsigned, unsigned long);
-	unsigned int (*check_events) (struct gendisk *disk,
+	int (*open) (struct block_device *, fmode_t);	/* 打开指定的块设备 */
+	void (*release) (struct gendisk *, fmode_t);	/* 关闭(释放)指定的块设备 */
+	int (*rw_page)(struct block_device *, sector_t, struct page *, unsigned int);	/* 读写指定的页 */
+	int (*ioctl) (struct block_device *, fmode_t, unsigned, unsigned long);		/* 块设备的 I/O 控制 */
+	int (*compat_ioctl) (struct block_device *, fmode_t, unsigned, unsigned long);	/* 块设备的 I/O 控制 */
+	unsigned int (*check_events) (struct gendisk *disk, 
 				      unsigned int clearing);
 	/* ->media_changed() is DEPRECATED, use ->check_events() instead */
 	int (*media_changed) (struct gendisk *);
 	void (*unlock_native_capacity) (struct gendisk *);
 	int (*revalidate_disk) (struct gendisk *);
-	int (*getgeo)(struct block_device *, struct hd_geometry *);
+	int (*getgeo)(struct block_device *, struct hd_geometry *);	/* 获取磁盘信息 */
 	/* this callback is with swap_lock and sometimes page table lock held */
 	void (*swap_slot_free_notify) (struct block_device *, unsigned long);
 	int (*report_zones)(struct gendisk *, sector_t sector,
 			unsigned int nr_zones, report_zones_cb cb, void *data);
-	struct module *owner;
+	struct module *owner;	/* 此结构体属于哪个模块 */
 	const struct pr_ops *pr_ops;
 };
 

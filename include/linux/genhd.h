@@ -179,13 +179,14 @@ struct blk_integrity {
 
 #endif	/* CONFIG_BLK_DEV_INTEGRITY */
 
+//描述一个磁盘设备
 struct gendisk {
 	/* major, first_minor and minors are input parameters only,
 	 * don't use directly.  Use disk_devt() and disk_max_parts().
 	 */
-	int major;			/* major number of driver */
-	int first_minor;
-	int minors;                     /* maximum number of minors, =1 for
+	int major;			/* 磁盘设备的主设备号 */ /* major number of driver */
+	int first_minor;	/* 磁盘的第一个次设备号 */
+	int minors;   	 	/* 磁盘的分区数量 */  /* maximum number of minors, =1 for
                                          * disks that can't be partitioned. */
 
 	char disk_name[DISK_NAME_LEN];	/* name of major driver */
@@ -199,11 +200,11 @@ struct gendisk {
 	 * non-critical accesses use RCU.  Always access through
 	 * helpers.
 	 */
-	struct disk_part_tbl __rcu *part_tbl;
+	struct disk_part_tbl __rcu *part_tbl;	/* 磁盘对应的分区表 */
 	struct hd_struct part0;
 
-	const struct block_device_operations *fops;
-	struct request_queue *queue;
+	const struct block_device_operations *fops;	/* 块设备操作集 */
+	struct request_queue *queue;	/* 请求队列 */
 	void *private_data;
 
 	int flags;
@@ -436,6 +437,16 @@ void update_io_ticks(struct hd_struct *part, unsigned long now);
 /* block/genhd.c */
 extern void device_add_disk(struct device *parent, struct gendisk *disk,
 			    const struct attribute_group **groups);
+
+/**
+ * @function: 将 gendisk 添加到内核
+ * @parameter: 
+ * 		disk： 要添加到内核的 gendisk
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 static inline void add_disk(struct gendisk *disk)
 {
 	device_add_disk(NULL, disk, NULL);
@@ -475,6 +486,17 @@ static inline sector_t get_capacity(struct gendisk *disk)
 {
 	return disk->part0.nr_sects;
 }
+
+/**
+ * @function: 设置 gendisk 容量
+ * @parameter: 
+ * 		disk： 要设置容量的 gendisk
+ * 		size： 磁盘容量大小
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 static inline void set_capacity(struct gendisk *disk, sector_t size)
 {
 	disk->part0.nr_sects = size;
@@ -687,6 +709,15 @@ extern ssize_t part_fail_store(struct device *dev,
 	__disk;								\
 })
 
+/**
+ * @function: 申请 gendisk
+ * @parameter: 
+ * 		minors： 次设备号数量
+ * @return: 
+ *     success: 申请到的 gendisk
+ *     error: NULL
+ * @note: 
+ */
 #define alloc_disk(minors) alloc_disk_node(minors, NUMA_NO_NODE)
 
 static inline int hd_ref_init(struct hd_struct *part)

@@ -351,6 +351,17 @@ void blkdev_show(struct seq_file *seqf, off_t offset)
  * See Documentation/admin-guide/devices.txt for the list of allocated
  * major numbers.
  */
+/**
+ * @function: 注册块设备
+ * @parameter: 
+ * 		major： 主设备号
+ * 		name： 块设备名字
+ * @return: 
+ *     success: 1~255 之间的话表示自定义主设备号, 返回 0 
+ * 			为 0 的话表示由系统自动分配主设备号, 返回值主设备号
+ *     error: 负值
+ * @note: 
+ */
 int register_blkdev(unsigned int major, const char *name)
 {
 	struct blk_major_name **n, *p;
@@ -415,6 +426,16 @@ out:
 
 EXPORT_SYMBOL(register_blkdev);
 
+/**
+ * @function: 注销块设备
+ * @parameter: 
+ * 		major： 要注销的块设备主设备号
+ * 		name： 要注销的块设备名字
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 void unregister_blkdev(unsigned int major, const char *name)
 {
 	struct blk_major_name **n;
@@ -770,6 +791,15 @@ void device_add_disk_no_queue_reg(struct device *parent, struct gendisk *disk)
 }
 EXPORT_SYMBOL(device_add_disk_no_queue_reg);
 
+/**
+ * @function: 删除 gendisk
+ * @parameter: 
+ * 		disk : 要删除的 gendisk
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 void del_gendisk(struct gendisk *disk)
 {
 	struct disk_part_iter piter;
@@ -1539,6 +1569,19 @@ struct kobject *get_disk_and_module(struct gendisk *disk)
 }
 EXPORT_SYMBOL(get_disk_and_module);
 
+/*
+	// 增加 gendisk 的引用计数 
+	struct kobject *get_disk(struct gendisk *disk)
+*/
+
+/**
+ * @function: 减少 gendisk 的引用计数
+ * @parameter: 
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
+ */
 void put_disk(struct gendisk *disk)
 {
 	if (disk)

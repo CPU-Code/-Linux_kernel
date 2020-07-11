@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:21
+ * @LastEditTime: 2020-06-27 19:50:03
+ * @FilePath: \Linux_kernel\kernel\fork.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  *  linux/kernel/fork.c
@@ -2491,10 +2499,11 @@ long do_fork(unsigned long clone_flags,
 
 	return _do_fork(&args);
 }
-#endif
+#endifuu
 
 /*
  * Create a kernel thread.
+ * 创建内核线程
  */
 pid_t kernel_thread(int (*fn)(void *), void *arg, unsigned long flags)
 {

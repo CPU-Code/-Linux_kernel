@@ -1,3 +1,19 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:07
+ * @LastEditTime: 2020-07-11 12:21:36
+ * @FilePath: \Linux_kernel\block\blk-core.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:07
+ * @LastEditTime: 2020-07-11 12:20:15
+ * @FilePath: \Linux_kernel\block\blk-core.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
 // SPDX-License-Identifier: GPL-2.0
 /*
  * Copyright (C) 1991, 1992 Linus Torvalds
@@ -330,12 +346,35 @@ void blk_set_queue_dying(struct request_queue *q)
 }
 EXPORT_SYMBOL_GPL(blk_set_queue_dying);
 
+
+/**
+ * @function: 初始化请求队列
+ * @parameter: 
+ * 		rfn： 请求处理函数指针
+ * 		lock： 自旋锁指针
+ * @return: 
+ *     success: 申请到的 request_queue 地址
+ *     error: NULL
+ * @note: 
+ */
+//request_queue *blk_init_queue(request_fn_proc *rfn, spinlock_t *lock)
+
+
 /**
  * blk_cleanup_queue - shutdown a request queue
  * @q: request queue to shutdown
  *
  * Mark @q DYING, drain all pending requests, mark @q DEAD, destroy and
  * put it.  All future requests will be failed immediately with -ENODEV.
+ */
+/**
+ * @function: 删除请求队列
+ * @parameter: 
+ * 		q： 需要删除的请求队列
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 
  */
 void blk_cleanup_queue(struct request_queue *q)
 {
@@ -389,6 +428,15 @@ void blk_cleanup_queue(struct request_queue *q)
 }
 EXPORT_SYMBOL(blk_cleanup_queue);
 
+/**
+ * @function: 分配请求队列并绑定制造请求
+ * @parameter: 
+ * 		gfp_mask： 内存分配掩码	, 参考 include/linux/gfp.h 中的相关宏定义
+ * @return: 
+ *     success: 无 I/O 调度的 request_queue
+ *     error: 
+ * @note: 
+ */
 struct request_queue *blk_alloc_queue(gfp_t gfp_mask)
 {
 	return blk_alloc_queue_node(gfp_mask, NUMA_NO_NODE);

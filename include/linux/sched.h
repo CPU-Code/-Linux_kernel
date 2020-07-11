@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:20
+ * @LastEditTime: 2020-06-27 19:49:36
+ * @FilePath: \Linux_kernel\include\linux\sched.h
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
 /* SPDX-License-Identifier: GPL-2.0 */
 #ifndef _LINUX_SCHED_H
 #define _LINUX_SCHED_H
@@ -626,6 +634,7 @@ struct wake_q_node {
 	struct wake_q_node *next;
 };
 
+//杝述进程
 struct task_struct {
 #ifdef CONFIG_THREAD_INFO_IN_TASK
 	/*

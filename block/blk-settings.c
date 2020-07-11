@@ -108,6 +108,16 @@ EXPORT_SYMBOL(blk_set_stacking_limits);
  *    kmap_atomic() to get a temporary kernel mapping, or by calling
  *    blk_queue_bounce() to create a buffer in normal memory.
  **/
+/**
+ * @function: 请求队列绑定一个“制造请求”
+ * @parameter: 
+ * 		q： 需要绑定的请求队列
+ * 		mfn：需要绑定的“制造”请求
+ * @return: 
+ *     success: 
+ *     error: 
+ * @note: 用于那么非机械的存储设备、无需 I/O 调度器，比如 EMMC、 SD 卡等
+ */
 void blk_queue_make_request(struct request_queue *q, make_request_fn *mfn)
 {
 	/*

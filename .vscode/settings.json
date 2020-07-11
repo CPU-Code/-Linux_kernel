@@ -5,7 +5,7 @@
      "**/*.o":true,
      "**/*.su":true,
      "**/*.cmd":true,
-     "Documentation":true,
+     //"Documentation":true,
     
      /* 屏蔽不用的架构相关的文件 */
      "arch/alpha":true,
@@ -54,7 +54,7 @@
         "**/*.o":true,
         "**/*.su":true,
         "**/*.cmd":true,
-        "Documentation":true,
+        //"Documentation":true,
 
         /* 屏蔽不用的架构相关的文件 */
         "arch/alpha":true,
