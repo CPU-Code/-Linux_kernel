@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-06-26 23:34:07
+ * @LastEditTime: 2020-07-11 12:32:23
+ * @FilePath: \Linux_kernel\block\blk-settings.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */ 
 // SPDX-License-Identifier: GPL-2.0
 /*
  * Functions related to setting various queue properties from drivers
